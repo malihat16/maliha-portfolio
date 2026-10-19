@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maliha Tariq, Software Engineer</title>
+<meta name="description" content="Maliha Tariq is a graduate software engineer in the UAE, available now. Full-stack web, Android and machine learning, including an award-winning speech recognition project.">
+<meta property="og:title" content="Maliha Tariq, Software Engineer">
+<meta property="og:description" content="Graduate software engineer in the UAE, available now. Full-stack web, Android and machine learning.">
+<meta property="og:image" content="assets/astone-home.jpg">
+<meta name="theme-color" content="#1D1A2B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231D1A2B'/%3E%3Cg fill='%23A99CFF'%3E%3Crect x='6' y='13' width='3' height='6' rx='1.5'/%3E%3Crect x='11' y='8' width='3' height='16' rx='1.5'/%3E%3Crect x='16' y='11' width='3' height='10' rx='1.5'/%3E%3Crect x='21' y='6' width='3' height='20' rx='1.5'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: dark;
+    --dusk: #1D1A2B;
+    --dusk-raised: #262238;
+    --line: #3A3452;
+    --paper: #EEEAF6;
+    --haze: #ADA6C4;
+    --violet: #A99CFF;
+    --violet-strong: #C3B9FF;
+    --live: #7FD8B0;
+    --display: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
+    --body: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --wrap: 1120px;
+    --gutter: clamp(16px, 4vw, 40px);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--dusk);
+    color: var(--paper);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
+  ul { padding: 0; list-style: none; }
+  a { color: inherit; }
+  ::selection { background: var(--violet); color: var(--dusk); }
+  :focus-visible { outline: 2px solid var(--violet-strong); outline-offset: 3px; border-radius: 4px; }
+
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+  .skip {
+    position: absolute; left: 16px; top: -48px; z-index: 20;
+    background: var(--paper); color: var(--dusk); padding: 8px 14px; border-radius: 8px;
+  }
+  .skip:focus { top: 12px; }
+
+  /* Navigation */
+  .site-nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(29, 26, 43, 0.86);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid transparent;
+    transition: border-color .2s;
+  }
+  .site-nav.scrolled { border-bottom-color: var(--line); }
+  .nav-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+  .nav-name { font-family: var(--display); font-weight: 650; font-size: 18px; text-decoration: none; letter-spacing: -0.01em; }
+  .nav-links { display: flex; align-items: center; gap: 4px; }
+  .nav-links a {
+    text-decoration: none; font-size: 15px; color: var(--haze);
+    padding: 6px 10px; border-radius: 8px;
+  }
+  .nav-links a:hover, .nav-links a[aria-current="true"] { color: var(--paper); }
+  .nav-links .nav-cv { color: var(--paper); border: 1px solid var(--line); margin-left: 6px; }
+  .nav-links .nav-cv:hover { border-color: var(--violet); }
+
+  /* Hero */
+  .hero { padding: clamp(48px, 9vw, 112px) 0 clamp(40px, 6vw, 72px); }
+  .status { display: inline-flex; align-items: center; gap: 10px; color: var(--haze); font-size: 16px; }
+  .status::before {
+    content: ""; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--live); box-shadow: 0 0 0 4px rgba(127, 216, 176, 0.16);
+  }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-variation-settings: "wdth" 78, "opsz" 96;
+    font-size: clamp(68px, 14.5vw, 196px);
+    line-height: 0.86;
+    letter-spacing: -0.035em;
+    margin: 22px 0 0;
+  }
+  .hero h1 span { display: inline-block; }
+  .wave {
+    position: relative;
+    margin: clamp(28px, 4vw, 44px) 0 0;
+    height: clamp(96px, 13vw, 150px);
+    cursor: crosshair;
+    touch-action: pan-y;
+  }
+  .wave canvas { width: 100%; height: 100%; display: block; }
+  .hero-body {
+    display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    gap: 24px 64px; align-items: end; margin-top: clamp(28px, 4vw, 40px);
+  }
+  .lead { font-size: clamp(19px, 2.1vw, 23px); line-height: 1.5; max-width: 34em; }
+  .lead a { color: var(--violet-strong); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 48px; padding: 0 22px; border-radius: 999px;
+    font: 600 16px/1 var(--body); text-decoration: none;
+    border: 1px solid var(--line); transition: background .15s, border-color .15s, color .15s;
+  }
+  .btn:hover { border-color: var(--violet); }
+  .btn-solid { background: var(--violet); border-color: var(--violet); color: var(--dusk); }
+  .btn-solid:hover { background: var(--violet-strong); border-color: var(--violet-strong); }
+
+  /* Sections */
+  section { padding: clamp(64px, 9vw, 120px) 0 0; }
+  .sec-head {
+    display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+    padding-bottom: 18px; border-bottom: 1px solid var(--line); margin-bottom: clamp(32px, 4vw, 48px);
+  }
+  h2 {
+    font-family: var(--display);
+    font-variation-settings: "wdth" 85, "opsz" 72;
+    font-weight: 650; font-size: clamp(34px, 4.6vw, 52px);
+    line-height: 1; letter-spacing: -0.025em;
+  }
+  .sec-note { color: var(--haze); font-size: 15px; text-align: right; }
+  h3 {
+    font-family: var(--display);
+    font-variation-settings: "wdth" 92, "opsz" 40;
+    font-weight: 620; font-size: clamp(25px, 2.7vw, 32px);
+    line-height: 1.12; letter-spacing: -0.015em;
+  }
+  .muted { color: var(--haze); }
+  .stack { color: var(--haze); font-size: 15px; margin-top: 18px; }
+  .text-link {
+    color: var(--violet-strong); font-weight: 600; text-decoration: underline;
+    text-decoration-thickness: 1px; text-underline-offset: 4px;
+  }
+  .text-link:hover { color: var(--paper); text-decoration-color: var(--violet); }
+
+  /* Feature projects */
+  .feature {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(28px, 5vw, 72px); align-items: center;
+  }
+  .feature + .feature { margin-top: clamp(64px, 8vw, 104px); }
+  .feature-text > * + * { margin-top: 16px; }
+  .feature-text .kicker { color: var(--haze); font-size: 15px; margin-top: 10px; }
+  .feature-text p { max-width: 36em; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 22px; }
+
+  .result {
+    background: var(--dusk-raised); border-radius: 18px; padding: clamp(22px, 3vw, 32px);
+  }
+  .result-title { font-weight: 600; }
+  .result-sub { color: var(--haze); font-size: 15px; margin-top: 2px; }
+  .bars { margin-top: 26px; display: grid; gap: 18px; }
+  .bar-label { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; margin-bottom: 8px; }
+  .bar-label b { font-family: var(--display); font-size: 20px; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .bar-track { height: 14px; border-radius: 7px; background: rgba(238, 234, 246, 0.07); overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 7px; transform-origin: left; }
+  .bar-fill.before { width: 100%; background: #6D6590; }
+  .bar-fill.after { width: 27.9%; background: var(--violet); }
+  .result-foot { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 15px; color: var(--haze); }
+  .result-foot strong { color: var(--paper); font-weight: 600; }
+
+  .shot { margin: 0; }
+  .shot-frame {
+    display: block; text-decoration: none;
+    border-radius: 14px; overflow: hidden; background: #fff;
+    border: 1px solid var(--line);
+    box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+  }
+  .shot-bar { display: flex; align-items: center; gap: 6px; height: 30px; padding: 0 12px; background: #2E2944; }
+  .shot-bar i { width: 9px; height: 9px; border-radius: 50%; background: #4A4366; }
+  .shot-bar span { margin-left: 10px; font-size: 12px; color: var(--haze); }
+  .shot figcaption { font-size: 14px; color: var(--haze); margin-top: 12px; }
+  .feature.flip .shot { order: -1; }
+
+  /* More projects */
+  .more { margin-top: clamp(64px, 8vw, 104px); }
+  .more-title { font-family: var(--display); font-weight: 600; font-size: 20px; color: var(--haze); margin-bottom: 8px; font-variation-settings: "wdth" 92; }
+  .row {
+    display: grid; grid-template-columns: 220px minmax(0, 1fr) auto;
+    gap: 8px 40px; padding: 26px 0; border-top: 1px solid var(--line);
+  }
+  .row:last-child { border-bottom: 1px solid var(--line); }
+  .row h3 { font-size: 24px; }
+  .row .what { color: var(--haze); font-size: 15px; margin-top: 4px; }
+  .row p { max-width: 40em; }
+  .row .stack { margin-top: 10px; }
+  .row .row-link { align-self: start; padding-top: 4px; white-space: nowrap; }
+
+  /* Experience */
+  .jobs > li {
+    display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 8px 40px;
+    padding: 26px 0; border-top: 1px solid var(--line);
+  }
+  .jobs > li:first-child { border-top: 0; padding-top: 0; }
+  .when { color: var(--haze); font-size: 15px; padding-top: 6px; font-variant-numeric: tabular-nums; }
+  .job-org { color: var(--haze); margin-top: 2px; }
+  .job-points { margin-top: 12px; display: grid; gap: 8px; max-width: 42em; }
+  .job-points li { position: relative; padding-left: 20px; }
+  .job-points li::before { content: ""; position: absolute; left: 2px; top: 0.72em; width: 8px; height: 2px; border-radius: 1px; background: var(--violet); }
+
+  /* Education */
+  .edu { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px clamp(32px, 6vw, 88px); }
+  .edu-main p { margin-top: 16px; max-width: 36em; }
+  .grade { display: flex; gap: 36px; margin-top: 26px; flex-wrap: wrap; }
+  .grade div { font-size: 15px; color: var(--haze); }
+  .grade b { display: block; color: var(--paper); font-family: var(--display); font-size: 30px; font-weight: 650; line-height: 1.1; font-variation-settings: "wdth" 85; }
+  .awards li { padding: 16px 0; border-top: 1px solid var(--line); }
+  .awards li:first-child { border-top: 0; padding-top: 0; }
+  .awards b { display: block; font-weight: 600; }
+  .awards span { color: var(--haze); font-size: 15px; }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px 40px; }
+  .skills dt { font-weight: 600; margin-bottom: 8px; }
+  .skills dd { color: var(--haze); line-height: 1.75; }
+
+  /* Contact */
+  .contact { padding-bottom: clamp(56px, 8vw, 96px); }
+  .contact-intro { max-width: 34em; font-size: clamp(18px, 1.9vw, 21px); margin-top: 18px; }
+  .email {
+    display: inline-block; margin-top: clamp(28px, 4vw, 40px);
+    font-family: var(--display); font-variation-settings: "wdth" 80, "opsz" 96;
+    font-weight: 650; font-size: clamp(30px, 6.4vw, 84px); line-height: 1; letter-spacing: -0.03em;
+    text-decoration: underline; text-decoration-color: var(--violet);
+    text-decoration-thickness: 0.06em; text-underline-offset: 0.14em;
+    overflow-wrap: anywhere;
+  }
+  .email:hover { color: var(--violet-strong); }
+  .elsewhere { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+
+  footer { border-top: 1px solid var(--line); padding: 24px 0 32px; color: var(--haze); font-size: 14px; }
+  .foot-row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  /* The one page-load moment: the waveform draws in (in JS). Everything else stays still. */
+  @media (max-width: 860px) {
+    .hero-body, .feature, .edu { grid-template-columns: minmax(0, 1fr); }
+    .actions { justify-content: flex-start; }
+    .feature.flip .shot { order: 0; }
+    .row { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+    .row .row-link { padding-top: 8px; }
+    .jobs > li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+    .when { padding-top: 0; }
+  }
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    .nav-links .hide-sm { display: none; }
+    .nav-links a { padding: 6px 8px; }
+    .sec-head { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .sec-note { text-align: left; }
+    .btn { flex: 1 1 auto; }
+    .hero h1 { font-size: 27vw; line-height: 0.84; }
+    .hero h1 span { display: block; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#work">Skip to work</a>
+
+<nav class="site-nav" id="nav" aria-label="Main">
+  <div class="wrap nav-row">
+    <a class="nav-name" href="#top">Maliha Tariq</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#experience" class="hide-sm">Experience</a>
+      <a href="#education" class="hide-sm">Education</a>
+      <a href="#contact">Contact</a>
+      <a href="Maliha_Tariq_CV.pdf" class="nav-cv" download>CV</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="status">Graduate software engineer in the UAE, available to start now</p>
+    <h1><span>Maliha</span> <span>Tariq</span></h1>
+
+    <div class="wave" id="wave" aria-hidden="true"><canvas id="waveCanvas"></canvas></div>
+
+    <div class="hero-body">
+      <p class="lead">
+        I build full-stack web apps, Android apps and machine learning systems. My final-year project
+        taught a speech model to <a href="#fyp">understand people with dysarthria</a>, and won Best Final
+        Year Project at Monash University Malaysia.
+      </p>
+      <div class="actions">
+        <a class="btn btn-solid" href="Maliha_Tariq_CV.pdf" download>Download CV</a>
+        <a class="btn" href="mailto:malihatariqqq@gmail.com">Email me</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Selected work</h2>
+      <p class="sec-note">Machine learning, web and mobile</p>
+    </div>
+
+    <article class="feature" id="fyp">
+      <div class="feature-text">
+        <h3>Helping speech recognition understand dysarthric speech</h3>
+        <p class="kicker">Final year project, 2026. Awarded Best Final Year Project in Software Engineering.</p>
+        <p>
+          Speech recognition tools fail people with dysarthria, a motor speech disorder. I probed why and
+          found that wav2vec2 barely encodes pitch. So I built a probe-guided feature injection pipeline that
+          feeds pitch and spectral features back into the model at the layer that needs them.
+        </p>
+        <p>
+          The improvement held for all 15 test speakers and every severity level, and a five-configuration
+          ablation study isolates what each feature contributes.
+        </p>
+        <p class="stack">Python, PyTorch, wav2vec2, librosa, TORGO dataset</p>
+      </div>
+
+      <figure class="result" aria-label="Phoneme error rate fell from 0.527 to 0.147">
+        <p class="result-title">Phoneme error rate</p>
+        <p class="result-sub">Across 15 dysarthric speakers. Lower is better.</p>
+        <div class="bars">
+          <div>
+            <div class="bar-label"><span>Baseline wav2vec2</span><b>0.527</b></div>
+            <div class="bar-track"><div class="bar-fill before"></div></div>
+          </div>
+          <div>
+            <div class="bar-label"><span>With feature injection</span><b>0.147</b></div>
+            <div class="bar-track"><div class="bar-fill after"></div></div>
+          </div>
+        </div>
+        <p class="result-foot"><strong>72% fewer errors</strong>, statistically significant (Wilcoxon signed-rank, p = 3.05×10⁻⁵)</p>
+      </figure>
+    </article>
+
+    <article class="feature flip" id="astone">
+      <div class="feature-text">
+        <h3>Astone</h3>
+        <p class="kicker">Clothing marketplace for independent Malaysian labels</p>
+        <p>
+          I led Astone as product manager for a year, owning the roadmap, Figma prototypes, the React front end
+          and the Django back end on PostgreSQL. Shoppers browse by category, pay with loyalty points and track
+          orders. Sellers get their own centre to list products, run promotions and ship orders.
+        </p>
+        <p>
+          I've since rebuilt it with secure JWT accounts, prices calculated on the server and 67 automated
+          tests. It's live, with the front end on Vercel and the API on Render.
+        </p>
+        <p class="stack">React, Vite, Material UI, Django REST Framework, PostgreSQL</p>
+        <div class="links">
+          <a class="text-link" href="https://astone-lovat.vercel.app/" target="_blank" rel="noopener">Visit the live site</a>
+          <a class="text-link" href="https://github.com/malihat16/Astone" target="_blank" rel="noopener">View the code on GitHub</a>
+        </div>
+      </div>
+      <figure class="shot">
+        <a href="https://astone-lovat.vercel.app/" target="_blank" rel="noopener" class="shot-frame" aria-label="Open the live Astone site">
+          <div class="shot-bar"><i></i><i></i><i></i><span>astone-lovat.vercel.app</span></div>
+          <picture>
+            <source srcset="assets/astone-home.webp" type="image/webp">
+            <img src="assets/astone-home.jpg" width="1200" height="750" loading="lazy" alt="Astone home page with large links to shop men's, women's and unisex clothing, next to a featured red tee">
+          </picture>
+        </a>
+        <figcaption>The demo API sleeps when idle, so the first load can take up to a minute.</figcaption>
+      </figure>
+    </article>
+
+    <div class="more">
+      <p class="more-title">More projects</p>
+      <div class="row">
+        <div>
+          <h3>SEMS2</h3>
+          <p class="what">In use by Monash clubs</p>
+        </div>
+        <div>
+          <p>
+            A role-based event platform for students, organisers and admins that covers the whole event lifecycle:
+            discovery, registration, feedback and certificates. I built the organiser console and admin workflows
+            end to end, with institution-only Google sign-in, real-time sync and CSV exports.
+          </p>
+          <p class="stack">SvelteKit, TypeScript, Supabase, Tailwind, Vitest, Playwright</p>
+        </div>
+        <a class="text-link row-link" href="https://github.com/malihat16/SEMS_2" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="row">
+        <div>
+          <h3>NutriTrack</h3>
+          <p class="what">Android with generative AI</p>
+        </div>
+        <div>
+          <p>
+            An Android app that turns clinical dietary scores into clear visuals, with Google Gemini giving
+            personalised nutrition tips. It has multi-user sign-in, a secure admin dashboard and an MVVM
+            architecture on Room.
+          </p>
+          <p class="stack">Kotlin, Jetpack Compose, Room, Retrofit, Gemini</p>
+        </div>
+        <a class="text-link row-link" href="https://github.com/malihat16/NutriTrack" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="row">
+        <div>
+          <h3>Crampanion</h3>
+          <p class="what">Interdisciplinary research</p>
+        </div>
+        <div>
+          <p>
+            A privacy-first menstrual health companion, designed with a team researching why PCOS and
+            endometriosis go undiagnosed. I designed the offline-first architecture, consent built into
+            onboarding, a low-effort daily check-in and reports ready to share with a doctor.
+          </p>
+          <p class="stack">Figma Make, privacy by design, UX research</p>
+        </div>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Experience</h2>
+      <p class="sec-note">Engineering and leadership</p>
+    </div>
+    <ul class="jobs">
+      <li>
+        <p class="when">Feb 2025 to Jun 2025</p>
+        <div>
+          <h3>Treasury, International Student Services</h3>
+          <p class="job-org">Monash University Malaysia</p>
+          <ul class="job-points">
+            <li>Managed budgets and expense tracking for international student events.</li>
+            <li>Prepared financial proposals, reconciled receipts and supported approvals.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <p class="when">Nov 2024 to Feb 2025</p>
+        <div>
+          <h3>IT Project Management Intern</h3>
+          <p class="job-org">Fireworks Solutions International, Selangor</p>
+          <ul class="job-points">
+            <li>Wrote Python automation scripts that cut manual work across API workflows and data pipelines.</li>
+            <li>Turned high-fidelity Figma prototypes into responsive, pixel-accurate web pages with the design lead.</li>
+            <li>Wrote and ran UAT scripts to validate features and confirm client acceptance.</li>
+            <li>Supported planning, milestone tracking and cross-team coordination in a client-facing agile team.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <p class="when">Jan 2024 to Dec 2024</p>
+        <div>
+          <h3>Engagement, International Student Services</h3>
+          <p class="job-org">Monash University Malaysia</p>
+          <ul class="job-points">
+            <li>Planned and ran large events, including some with more than 500 attendees.</li>
+            <li>Wrote risk assessments and budgets, and coordinated vendors, logistics and delivery across teams.</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Education</h2>
+      <p class="sec-note">Monash University Malaysia, 2022 to 2026</p>
+    </div>
+    <div class="edu">
+      <div class="edu-main">
+        <h3>Bachelor of Software Engineering (Honours)</h3>
+        <p>
+          A foundation in software design, testing, databases, agile delivery and machine learning, built through
+          hands-on team projects, alongside student leadership roles in International Student Services.
+        </p>
+        <div class="grade">
+          <div><b>3.7</b>CGPA</div>
+          <div><b>2026</b>Graduated</div>
+          <div><b>UAE</b>Golden Visa holder</div>
+        </div>
+      </div>
+      <div>
+        <p class="more-title">Recognition</p>
+        <ul class="awards">
+          <li><b>Best Final Year Project</b><span>Software Engineering, Monash University Malaysia, 2026</span></li>
+          <li><b>High Achiever Award</b><span>Monash University academic recognition</span></li>
+          <li><b>Outstanding Leader Award</b><span>GEMS Education</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Toolkit</h2>
+      <p class="sec-note">I speak English and Urdu</p>
+    </div>
+    <dl class="skills">
+      <div><dt>Languages</dt><dd>Python, Java, JavaScript, TypeScript, Kotlin, PHP</dd></div>
+      <div><dt>Front end</dt><dd>React, SvelteKit, Tailwind CSS, Jetpack Compose, HTML and CSS, Figma</dd></div>
+      <div><dt>Back end and data</dt><dd>Django, Node.js, REST APIs, PostgreSQL, Supabase, MySQL, MongoDB, Oracle</dd></div>
+      <div><dt>Machine learning</dt><dd>PyTorch, wav2vec2, librosa, Gemini API, model evaluation</dd></div>
+      <div><dt>Testing and delivery</dt><dd>Vitest, Playwright, UAT, GitHub, Agile and Scrum, Jira, Trello</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Get in touch</h2>
+      <p class="sec-note">Based in the UAE</p>
+    </div>
+    <p class="contact-intro">
+      I'm looking for graduate software engineering roles in the UAE, across full-stack, front end, back end,
+      mobile and machine learning teams. The quickest way to reach me is email.
+    </p>
+    <a class="email" href="mailto:malihatariqqq@gmail.com">malihatariqqq@gmail.com</a>
+    <div class="elsewhere">
+      <a class="btn" href="https://www.linkedin.com/in/malihatariqq" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/malihat16" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="Maliha_Tariq_CV.pdf" download>Download CV</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-row">
+    <span>© 2026 Maliha Tariq</span>
+    <a href="#top" class="text-link" style="font-weight:500">Back to top</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Sticky nav border once the page scrolls
+  var nav = document.getElementById('nav');
+  var onScroll = function () { nav.classList.toggle('scrolled', window.scrollY > 8); };
+  document.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Highlight the section in view
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (a) {
+          if (a.getAttribute('href') === '#' + e.target.id) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ['work', 'experience', 'education', 'contact'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) spy.observe(el);
+    });
+  }
+
+  // Speech waveform: draws in once on load, then follows the pointer like a playhead.
+  var box = document.getElementById('wave');
+  var canvas = document.getElementById('waveCanvas');
+  var ctx = canvas.getContext('2d');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var css = getComputedStyle(document.documentElement);
+  var played = css.getPropertyValue('--violet').trim() || '#A99CFF';
+  var idle = '#4A4366';
+
+  // Deterministic "speech": syllable-shaped bursts with pauses between words.
+  var seed = 7;
+  function rand() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+  var syllables = [];
+  var t = 0.02;
+  while (t < 0.98) {
+    var len = 0.025 + rand() * 0.045;
+    syllables.push({ c: t + len / 2, w: len / 2, a: 0.3 + rand() * 0.7 });
+    t += len + (rand() < 0.28 ? 0.035 + rand() * 0.04 : 0.006);
+  }
+  function envelope(x) {
+    var v = 0;
+    for (var i = 0; i < syllables.length; i++) {
+      var s = syllables[i], d = (x - s.c) / s.w;
+      if (Math.abs(d) < 1.6) v = Math.max(v, s.a * Math.exp(-d * d * 1.6));
+    }
+    return v;
+  }
+
+  var bars = [], width = 0, height = 0, head = -1, progress = reduce ? 1 : 0;
+  function layout() {
+    var r = box.getBoundingClientRect();
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    width = r.width; height = r.height;
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var step = width < 500 ? 5 : 6;
+    var n = Math.floor(width / step);
+    seed = 11;
+    bars = [];
+    for (var i = 0; i < n; i++) {
+      var x = (i + 0.5) / n;
+      var e = envelope(x);
+      var jitter = 0.4 + rand() * 0.6;
+      bars.push(Math.max(0.03, e * jitter));
+    }
+    draw();
+  }
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+    var n = bars.length;
+    if (!n) return;
+    var step = width / n, bw = Math.max(2, step * 0.5), mid = height / 2;
+    var shown = Math.floor(n * progress);
+    for (var i = 0; i < shown; i++) {
+      var h = Math.max(2, bars[i] * (height - 4));
+      var x = i * step + (step - bw) / 2;
+      ctx.fillStyle = head < 0 ? played : (x <= head ? played : idle);
+      var y = mid - h / 2, r = bw / 2;
+      ctx.beginPath();
+      if (ctx.roundRect) ctx.roundRect(x, y, bw, h, r); else ctx.rect(x, y, bw, h);
+      ctx.fill();
+    }
+    if (head >= 0) {
+      ctx.fillStyle = '#EEEAF6';
+      ctx.fillRect(Math.round(head), 0, 1.5, height);
+    }
+  }
+  function intro() {
+    if (reduce) { draw(); return; }
+    var start = null, dur = 1400;
+    function frame(now) {
+      if (start === null) start = now;
+      var p = Math.min(1, (now - start) / dur);
+      progress = 1 - Math.pow(1 - p, 3);
+      draw();
+      if (p < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+  box.addEventListener('pointermove', function (e) {
+    if (e.pointerType === 'touch') return;
+    head = e.clientX - box.getBoundingClientRect().left;
+    draw();
+  });
+  box.addEventListener('pointerleave', function () { head = -1; draw(); });
+
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(layout, 120);
+  });
+  layout();
+  intro();
+})();
+</script>
+</body>
+</html>
